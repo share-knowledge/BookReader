@@ -1,7 +1,5 @@
 <resources>
 
-    BaseContract application theme.
-
     <style name="AppTheme" parent="Theme.AppCompat.DayNight">
         <!--标题栏的颜色-->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -14,7 +12,7 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-    </style>
+    </style>/
 
     <style name="AppTheme.NoActionBar.FullScreen" parent="AppTheme.NoActionBar">
         <item name="android:windowFullscreen">true</item>
@@ -38,7 +36,7 @@
     </style>
 
     <style name="ActionButton.Overflow.Menu" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
-        <item name="android:src">@drawable/abc_ic_menu_moreoverflow_mtrl_alpha</item>
+        <item name="android:src">@drawable/abc_ic_search_api_mtrl_alpha</item>
     </style>
 
     <!--把该属性改为false即可使menu位置位于toolbar之下-->
