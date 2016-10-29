@@ -51,7 +51,7 @@ public class BookHelpPresenter extends RxPresenter<BookHelpContract.View> implem
 
                     @Override
                     public void onNext(BookHelpList list) {
-                        boolean isRefresh = start == 0 ? true : false;
+                        boolean isRefresh = start == 0;
                         mView.showBookHelpList(list.helps, isRefresh);
                     }
                 });

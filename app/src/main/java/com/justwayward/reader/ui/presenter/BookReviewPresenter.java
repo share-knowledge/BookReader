@@ -52,7 +52,7 @@ public class BookReviewPresenter extends RxPresenter<BookReviewContract.View> im
                     @Override
                     public void onNext(BookReviewList list) {
                         LogUtils.d("onNext: get data finish");
-                        boolean isRefresh = start == 0 ? true : false;
+                        boolean isRefresh = start == 0;
                         mView.showBookReviewList(list.reviews, isRefresh);
                     }
                 });

@@ -49,7 +49,7 @@ public class BooksByTagPresenter extends RxPresenter<BooksByTagContract.View> im
                             if (data != null) {
                                 List<BooksByTag.TagBook> list = data.books;
                                 if (list != null && !list.isEmpty() && mView != null) {
-                                    boolean isRefresh = start.equals("0") ? true : false;
+                                    boolean isRefresh = start.equals("0");
                                     mView.showBooksByTag(list, isRefresh);
                                 }
                             }

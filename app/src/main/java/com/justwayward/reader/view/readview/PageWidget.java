@@ -102,11 +102,8 @@ public class PageWidget extends BaseReadView {
             mCornerY = 0;
         else
             mCornerY = mScreenHeight;
-        if ((mCornerX == 0 && mCornerY == mScreenHeight)
-                || (mCornerX == mScreenWidth && mCornerY == 0))
-            mIsRTandLB = true;
-        else
-            mIsRTandLB = false;
+        mIsRTandLB = (mCornerX == 0 && mCornerY == mScreenHeight)
+                || (mCornerX == mScreenWidth && mCornerY == 0);
     }
 
     /**
@@ -546,11 +543,7 @@ public class PageWidget extends BaseReadView {
             case MotionEvent.ACTION_MOVE:
                 int mx = (int) e.getX();
                 int my = (int) e.getY();
-                if ((actiondownX < mScreenWidth / 2 && mx < mTouch.x) || (actiondownX > mScreenWidth / 2 && mx > mTouch.x)) {
-                    cancel = true;
-                } else {
-                    cancel = false;
-                }
+                cancel = (actiondownX < mScreenWidth / 2 && mx < mTouch.x) || (actiondownX > mScreenWidth / 2 && mx > mTouch.x);
                 mTouch.x = mx;
                 mTouch.y = my;
                 this.postInvalidate();

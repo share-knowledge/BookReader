@@ -51,7 +51,7 @@ public class SubCategoryFragmentPresenter extends RxPresenter<SubCategoryFragmen
 
                     @Override
                     public void onNext(BooksByCats booksByCats) {
-                        mView.showCategoryList(booksByCats, start == 0 ? true : false);
+                        mView.showCategoryList(booksByCats, start == 0);
                     }
                 });
         addSubscrebe(rxSubscription);

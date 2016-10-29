@@ -52,7 +52,7 @@ public class SubjectFragmentPresenter extends RxPresenter<SubjectFragmentContrac
 
                     @Override
                     public void onNext(BookLists tags) {
-                        mView.showBookList(tags.bookLists, start == 0 ? true : false);
+                        mView.showBookList(tags.bookLists, start == 0);
                         if (tags.bookLists == null || tags.bookLists.size() <= 0) {
                             ToastUtils.showSingleToast("暂无相关书单");
                         }

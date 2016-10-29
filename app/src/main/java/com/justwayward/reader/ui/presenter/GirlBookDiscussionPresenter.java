@@ -51,7 +51,7 @@ public class GirlBookDiscussionPresenter extends RxPresenter<GirlBookDiscussionC
 
                     @Override
                     public void onNext(DiscussionList list) {
-                        boolean isRefresh = start == 0 ? true : false;
+                        boolean isRefresh = start == 0;
                         mView.showGirlBookDisscussionList(list.posts, isRefresh);
                     }
                 });

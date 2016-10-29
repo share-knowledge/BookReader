@@ -50,7 +50,7 @@ public class BookDetailReviewPresenter extends RxPresenter<BookDetailReviewContr
 
                     @Override
                     public void onNext(HotReview list) {
-                        boolean isRefresh = start == 0 ? true : false;
+                        boolean isRefresh = start == 0;
                         mView.showBookDetailReviewList(list.reviews, isRefresh);
                     }
                 });
